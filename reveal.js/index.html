@@ -11,6 +11,16 @@
 	<link rel="stylesheet" href="dist/reveal.css">
 	<link rel="stylesheet" href="dist/theme/black.css">
 
+	<style>
+		.reveal pre code {
+			white-space: pre-wrap !important;       /* css-3 */
+			white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+			white-space: -pre-wrap !important;      /* Opera 4-6 */
+			white-space: -o-pre-wrap !important;    /* Opera 7 */
+			word-wrap: break-word !important;       /* Internet Explorer 5.5+ */
+		}
+	</style>
+
 	<!-- Theme used for syntax highlighted code -->
 	<link rel="stylesheet" href="plugin/highlight/monokai.css">
 </head>
@@ -20,9 +30,47 @@
 		<div class="slides">
 
 			<section>
-				<h1>Python Workshop</h1>
+				<h2>Python Essentials for Technology Professionals</h2>
 				<p>Presented Online for Trade Me By Simon Merrick</p>
 				<p>2023-10-25</p>
+			</section>
+
+			<section>
+				<h2>Who is this course for?</h2>
+				<p>People with experience with one or more other languages looking to transition/upskill in Python</p>
+			</section>
+
+			<section>
+				<h2>What will we cover</h2>
+				<ul>
+					<li>Python specific language features</li>
+					<li>Python best practices</li>
+					<li>Python ecosystem (package and Environment Management)</li>
+					<li>Quirks and Gotchas</li>
+					<li>How to get the most out of Python</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Goal</h2>
+				<p>Unknown Unknowns -> Known Knowns</p>
+				<p>Unknown Unknowns -> Known Unknowns</p>
+			</section>
+
+			<section>
+				<h2>What this course is not</h2>
+				<ul>
+					<li>Programming fundamentals</li>
+					<li>A deep dive into how to do every little thing in Python</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Assumptions</h2>
+				<ul>
+					<li>Basic understanding of programming fundamentals</li>
+					<li>Ability to google / find documentation for basics</li>
+				</ul>
 			</section>
 
 			<section>
@@ -34,9 +82,11 @@
 
 			<section>
 				<h2>Who am I</h2>
-				10 years of academic and professional Python experience<br>
-				Former Secretary of the New Zealand Python User Group<br>
-				Volunteer/Organising team for KiwiPycon 2019, 2022, 2023, 2024
+				<ul>
+					<li>10 years of academic and professional Python experience</li>
+					<li>Python NZ former Secretary and nominated committee member</li>
+					<li>Volunteer/Organising team for KiwiPycon 2019, 2022, 2023, 2024</li>
+				</ul>
 			</section>
 
 			<section>
@@ -61,40 +111,30 @@
 			</section>
 
 			<section>
-				<img src="assets/monty_python.jpg"><br>
+				<img src="assets/monty_python.jpg" height="600px"><br>
 			</section>
 
 			<section>
-				Data Science<br>
-				Scientific Computing<br>
-				Machine Learning/AI<br>
-				Web Development<br>
-				+ More
+				<img src="assets/spam_eggs.PNG" height="600px"><br>
 			</section>
 
 			<section>
-				<img src="assets/companies.jpg"><br>
+				<img src="assets/unladen_swallow.png"><br>
 			</section>
 
 			<section>
-				TIOBE Index "Programming Language of the Year"<br><br>
-
-				2023, 2021, 2020, 2018, 2010, 2007
-			</section>
-
-			<!-- <section>
-				<img src="assets/psf.png" height="500px"><br>
-				<a href="https://www.python.org/psf-landing/">https://www.python.org/psf-landing/</a>
-			</section> -->
-
-			<!-- <section>
 				<h2>Python 2</h2><br>
 				2000 - 2015 🪦
 			</section>
 
 			<section>
+				<h2>Python 3</h2><br>
+				2008 - Present
+			</section>
+
+			<section>
 				<h2>Semver</h2><br>
-				<code>major.minor.patch</code>
+				<p>MAJOR.Minor.patch<p>
 			</section>
 
 			<section>
@@ -108,48 +148,53 @@
 			</section>
 
 			<section>
-				<h2>Python 3</h2><br>
-				2008 - present
+				<img src="assets/python_release_cycle.png" height="500px"><br>
+				<p><a>https://devguide.python.org/versions/</a></p>
 			</section>
 
 			<section>
 				<h2>Python 4</h2><br>
 				...probably not
-			</section> -->
+			</section>
+
+			<section>
+				<img src="assets/companies.jpg"><br>
+			</section>
+
+			<section>
+				Data Science<br>
+				Scientific Computing<br>
+				Machine Learning/Artificial Intelligence<br>
+				Web Development<br>
+				+ More
+			</section>
+
+			<section>
+				TIOBE Index "Programming Language of the Year"<br><br>
+
+				2023, 2021, 2020, 2018, 2010, 2007
+			</section>
+
+			 <section>
+				<h2>Why Python?</h2><br>
+				Easy, Powerful, Flexible, Extensible
+			</section>
+
+			<section>
+				<p>Relevant XKCD (<a href="https://xkcd.com/353/">#353</a>)</p>
+				<img src="assets/xkcd_353.png"><br>
+			</section>
+
+			<section>
+				Widely adopted by professionals who's primary job is <i><b>**not**</b></i> full time programming
+			</section>
 
 			<!-- <section>
-				<img src="assets/python_release_cycle.png" height="600px"><br>
+				<pr>Easter Egg</pr>
+				<pre><code>
+					>>> import antigravity
+				</code></pre>
 			</section> -->
-
-			<!-- 
-			<section>
-				<h1>🐍⛔</h1>
-			</section>
-
-			<section>
-				<img src="assets/monty_python.jpg"><br>
-			</section>
-
-			<section>
-				"Meta Syntactic Arguments"<br>
-
-				<s><code>foo</code></s>, <s><code>bar</code></s> ➡️ <code>spam</code>, <code>eggs</code>
-			</section>
-
-			<section>
-				<img src="assets/spam_eggs.PNG" height="600px"><br>
-			</section>
-
-			<section>
-				<img src="assets/unladen_swallow.png"><br>
-			</section>
-
- -->
-
-			<section>
-				<h2>Why Python?</h2><br>
-				Easy, Powerful, Flexible
-			</section>
 
 			<section>
 				Specifically designed to be easily <s>written</s> <i><b>read</b></i>
@@ -177,16 +222,6 @@ Readability counts.
 			</section>
 			</section>
 
-			<!-- <section>
-				Data Science<br>
-				Scientific Computing<br>
-				Machine Learning/AI<br>
-				Web Development<br>
-			</section> -->
-
-			<section>
-				Widely adopted by professionals who's primary job is <i><b>**not**</b></i> full time programming
-			</section>
 
 			<section>
 				"Batteries Included"<br><br>
@@ -196,110 +231,17 @@ Readability counts.
 				<a>https://docs.python.org/3/library/index.html</a>
 			</section>
 
-			<section>
-				<p>Relevant XKCD (<a href="https://xkcd.com/353/">#353</a>)</p>
-				<img src="assets/xkcd_353.png"><br>
-			</section>
-
-			<section>
-				<pr>Easter Egg</pr>
-				<pre><code>
-					>>> import antigravity
-				</code></pre>
-			</section>
-
-			<section>
-				PyPI (<b>Py</b>thon <b>P</b>ackage <b>I</b>ndex)
-				<img src="assets/pypi.PNG"><br>
-				<a>https://pypi.org/</a>
-			</section>
-
-			<section>
-				<table>
-					<tr>
-						<th>Data Science</th>
-						<td>Pandas</td>
-					</tr>
-					<tr>
-						<th>Scientific Computing</th>
-						<td>NumPy, SciPy, PyPlot</td>
-					</tr>
-					<tr>
-						<th>Machine/AI</th>
-						<td>PyTorch, TensorFlow</td>
-					</tr>
-					<tr>
-						<th>Web Development</th>
-						<td>Django, Flask, FastAPI</td>
-					</tr>
-				</table>
-				<p>+ 480,000 more packages in PyPI</p>
-			</section>
-
-			<!-- 
-			<section>
-				<h2>Python Myths</h2>
-
-				Myth #1 "Python is Slow"
-			</section> -->
-
-			<section>
-				<h2>Python Performance</h2>
-				<p>"Python is slow"</p>
-			</section>
-
-			<section>
-				<h2>Python Performance</h2>
-				<p><s>"Python is slow"</s></p>
-				<p></p>Python is fast to <b><i>**write**</i></b></p>
-			</section>
-
-			<section>
-				<h2>Python Performance</h2>
-
-				<img src="assets/c_extensions.PNG"><br>
-			</section>
-
-
+			<section data-markdown="sections/1_hello_world.md" data-separator="^---$" data-separator-vertical="^--$"></section>
+			<section data-markdown="sections/2_basics.md" data-separator="^---$" data-separator-vertical="^--$"></section>
+			<section data-markdown="sections/flow_control.md" data-separator="^---$" data-separator-vertical="^--$"></section>
+			<section data-markdown="sections/codestyle.md" data-separator="^---$" data-separator-vertical="^--$"></section>
+			<section data-markdown="sections/functions.md" data-separator="^---$" data-separator-vertical="^--$"></section>
+			<section data-markdown="sections/code_organisation.md" data-separator="^---$" data-separator-vertical="^--$"></section>
+			<section data-markdown="sections/typing.md" data-separator="^---$" data-separator-vertical="^--$"></section>
 
 			<!-- <section>
-				<pre><code>
-					print("Hello World")
-				</code></pre>
-
-				<pre><code>
-					import antigravity
-				</code></pre>
-			</section> -->
-
-			<!-- <section>
-				<h2>PEP</h2>
-				<p><b>P</b>ython <b>E</b>nhancement <b>P</b>roposal</p>
-				https://peps.python.org/
-			</section> -->
-
-			<!-- Installation and Environments -->
-
-			<!-- <section>
-
-			</section> -->
-
-
-
-			<!-- ###################################################################################
-							Installation and Environments
-			#####################################################################################-->
-
-			<section>
-				<h1>Installation and Environments</h1>
-			</section>
-
-			<!-- <section>
-				<img src="assets/python_release_cycle.png" height="600px"><br>
-			</section> -->
-
-			<section>
-				<h1>Dependency Management</h1>
+				<quote>"There should be one-- and preferably only one --obvious way to do it."</quote>
+				<quote>"The Zen of Python"</quote>
 			</section>
 
 			<section>
@@ -307,7 +249,38 @@ Readability counts.
 				<a href="https://xkcd.com/1987/">https://xkcd.com/1987/</a>
 			</section>
 
-			<section>Slide 2</section>
+			<section>
+				<p>Environment Management</p>
+				virtualenv,
+				pipenv,
+				pyenv,
+				anaconda
+
+				<p>Dependency Management</p>
+				conda, poetry,
+			</section> -->
+
+			<!-- <section>
+				<img src="assets/python_release_cycle.png" height="600px"><br>
+			</section> -->
+
+			<!-- ###################################################################################
+							Installation and Environments
+			#####################################################################################-->
+
+
+			<!-- Use external markdown resource, separate slides by three newlines; vertical slides by two newlines
+			<section data-markdown="sections/installation.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section> -->
+
+<!-- ###################################################################################
+#
+#
+#                                 Advanced Topics
+#
+#####################################################################################-->
+
+			<section data-markdown="sections/typing.md" data-separator="^---$" data-separator-vertical="^--$"></section>
+
 		</div>
 	</div>
 
@@ -326,6 +299,9 @@ Readability counts.
 			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
 		});
 	</script>
+
+
+
 </body>
 
 </html>
