@@ -2,6 +2,13 @@
 
 ---
 
+...as the joke goes
+
+![](../assets/xkcd_1987.png)
+
+https://xkcd.com/1987/
+---
+
 Linux
 ```bash
 $ which python3
@@ -144,8 +151,7 @@ pip install flake8
 
 no ``sudo`` required
 
-If you were previously using ``python3`` ``python``
-
+If you were previously using '``python3``' you can now just use '``python``' to start a shell.
 
 ---
 

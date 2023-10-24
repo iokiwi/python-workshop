@@ -52,20 +52,21 @@ greet("Simon", greeting="Guten Tag")  #  Guten Tag, Simon!
 
 Gotchas!
 
+---
+
 Mutable default arguments
 
 Never do this!
-
-```python
-def foo(a, b={})
-    pass
-```
 
 ```python
 def foo(a, b=[]):
     pass
 ```
 
+```python
+def foo(a, b={})
+    pass
+```
 
 ---
 

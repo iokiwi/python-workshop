@@ -1,18 +1,32 @@
 my_string = "ThIs iS mY StRiNg"
+# Excercise: print the length of my_string
 
-# Excercise 1 print the length of the string
 
-# Excercise 2 print the string in all upper case
+# Excercise: print the string in all upper case
 
-# Excercise 3 concatenate my_string and another string
+
+# Excercise: print the string in title case
+
+# Excercise: String Concatenation. join my_string and another string to create
+# one big long string.
 another_string = "it's really lovely"
 
-# Excercise 4 use string formatting to interpolates varaible into a string
-today = "Wednesday"
-template = "Today is {}"
+
+################################
+# String formatting
+################################
+
+# Excercise: Print the first for digits of pi
+pi = 3.1415923
+print("The first for digits of pi are {}")
+
+# Option 1. template.format()
+
+# Option 2. f string
+
+# Excercise: Right align the first 4 digits of py
 
 
-# Excersise 5: Split a string into a list
-
-
-# Excersise 6: Create a list
+################################
+#
+################################

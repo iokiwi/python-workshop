@@ -2,21 +2,6 @@
 
 ---
 
-Basic Python Types
-
-|||
-|---|---|
-|``str``|``"This is a string literal"``|
-|``bool``|``True`` or ``False``|
-|``None``|``None``|
-|``int``|``10``, ``0xA``, ``0O12``, ``0b1010``|
-|``float``|``3.14159265358``|
-|``complex``|``3 + 2j``|
-
-https://docs.python.org/3/library/stdtypes.html
-
----
-
 ### Python is Strongly typed
 
 Variables do have a type and that the type matters when performing operations on a variable.
@@ -29,6 +14,19 @@ Variables do have a type and that the type matters when performing operations on
 |JavaScript|TypeScript|
 |shell|Java|
 |PHP|C#|
+
+---
+
+Some Basic Python Types
+
+|||
+|---|---|
+|``str``|``"This is a string literal"``|
+|``int``|``10``, ``0xA``, ``0O12``, ``0b1010``|
+|``float``|``3.14159265358``|
+|``complex``|``3 + 2j``|
+
+https://docs.python.org/3/library/stdtypes.html
 
 ---
 
@@ -105,11 +103,38 @@ https://docs.python.org/3/library/typing.html
 
 ---
 
+Builtin functions
+
+<img src="../assets/builtin_functions.PNG" height="400px">
+
+https://docs.python.org/3/library/functions.html
+
+---
+
+Builtin functions
+
+Already seen:
+
+```python
+type(), print()
+```
+
+We'll visit more of these as we go
+
+```python
+dir(), help(), len(), range(), enumerate(), zip(), # + More
+```
+
+https://docs.python.org/3/library/functions.html
+
+
+---
+
 <!-- In Python everything is an object, even functions
 <br>
 <br> -->
 
-We find out the type of a variable with ``type()``
+``type()`` tells us the type of an object
 <br>
 <br>
 
@@ -166,42 +191,122 @@ We will come back to these and even write our own -->
 
 ---
 
-Builtin functions
+More Python Types
 
-<img src="../assets/builtin_functions.PNG" height="400px">
+|||
+|---|---|
+|``bool``|'``True``' or '``False``'|
+|``None``| Equivalent to '``null``' or '``nil``' in other languages |
 
-https://docs.python.org/3/library/functions.html
+https://docs.python.org/3/library/stdtypes.html
 
+---
+
+Comparison
+
+|||
+|---|---|
+|Equality| ``a == b`` |
+|Inequality| ``a != b `` |
+|Greater than| ``a >= b`` |
+|Less than | ``a <= b``|
+
+https://docs.python.org/3/library/stdtypes.html#comparisons
 
 ---
 
+Integer Arithmatic
 
-Builtin functions
+|||
+|---|---|
+|Additiona and Subtraction| ``a + b``, ``a - b``|
+|Multiplcation and Division| ``a * b``, ``a / b`` |
+|Exponentiation| ``a ** b`` |
+|Floor division | ``a // b `` |
 
-Already seen:
-
-```python
-dir(), help(), type(), print()
-```
-
-We'll visit more of these as we go
-
-```python
-len(), range(), enumerate(), zip(), # + More
-```
-
-https://docs.python.org/3/library/functions.html
-
+https://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-complex
 
 ---
+
+String concatenation
+
+```
+"what a wonderful" + " " +  "day"
+```
+
+---
+
+Common string methods
+
+``upper()`` and ``lower()``
+```python
+"foo".upper()   # "FOO"
+```
+
+strip(), lstrip(), and rstrip()
+
+```python
+"foo   ".strip()   #  "foo"
+"foo".strip("o")   #  "f"
+```
+
+---
+
+``split()`` and ``join()``
+ 
+```python
+"foo".split()   #  ['f', 'o', 'o']
+```
+
+The opposite of ``split`` is not this
+
+```python
+['f', 'o', 'o'].join("")
+# AttributeError: 'list' object has no attribute 'join'
+```
+
+---
+
+The opposite of ``split``
+
+```python
+"foo".split()   #  ['f', 'o', 'o']
+```
+
+is this
+
+```python
+"".join(['f', 'o', 'o'])    #  "foo"
+```
+
+---
+
 
 Built In Collection Types
 
 |||
 |---|---|
-|``tuple``|``(1, 2, 3)``|
 |``list``|``[1, 2, 3]``|
+|``tuple``|``(1, 2, 3)``|
 |``set``|``{1, 2, 3}``|
 |``dict``|``{"a": 1, "b":2, "c": 3}``|
 
-We'll also visit these in greater detail later
+---
+
+list methods
+
+
+``append()`` and ``pop()``
+
+```python
+my_list = [1, 2, 3]
+```
+
+```python
+my_list.append(4)
+```
+
+```python
+my_list.append(pop())
+```
+
