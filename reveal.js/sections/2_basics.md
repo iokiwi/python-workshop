@@ -1,19 +1,4 @@
-## Orienting Ourselves in python
-
-python cares about whitespaces
-
-```python
-if true:
-    
-```
-
-
-
----
-
-Python is Strongly typed
-
-This means that Python cares about the types of variables and will not implicitly convert them for us.
+## Orientating Ourselves in python
 
 ---
 
@@ -23,91 +8,130 @@ Basic Python Types
 |---|---|
 |``str``|``"This is a string literal"``|
 |``bool``|``True`` or ``False``|
-|``int``|``1``, ``0xF9``, ``0O20``, ``0b0110``|
+|``None``|``None``|
+|``int``|``10``, ``0xA``, ``0O12``, ``0b1010``|
 |``float``|``3.14159265358``|
 |``complex``|``3 + 2j``|
 
-
 https://docs.python.org/3/library/stdtypes.html
+
+---
+
+### Python is Strongly typed
+
+Variables do have a type and that the type matters when performing operations on a variable.
+
+---
+
+|Loosely Typed|Strongly Typed|
+|---|---|
+|Perl|**Python**|
+|JavaScript|TypeScript|
+|shell|Java|
+|PHP|C#|
 
 ---
 
 ```python
 1 + 2        # 3
 1 + "2"      # TypeError: unsupported operand type(s) for +: 'int' and 'str'
-1 + int("2") # 3
-str(1) + "2" # "12"
 ```
 
 ---
 
-Python is dynamically typed
+### Python is dynamically typed
 
-This means that the type of a variable is not fixed / known at compile time and can change throughout the lifecycle of the programm
+* Explicit type declarations are not requried
+* Type checking is completed during run time
+* The type of a variable can change
 
 ---
+
+|Dynamically Typed|Statically Typed|
+|---|---|
+|**Python**|Go|
+|Javascript|TypeScript|
+|Perl|C#|
+|PHP|Java|
+
+---
+
+Python is Dynamically Typed
 
 ```python
 foo = "this is a string"
 type(foo) # <class 'str'>
+
 foo = 9000
 type(foo) # <class 'int'>
 ```
 
 ---
 
-In python everything is an object, even functions and primitive types
-
 ```python
-foo = "a"
-type(foo)
-# <class 'str'>
+def greeting(name):
+    return 'Hello ' + name
+
+greeting(1)
 ```
-
-```python
-bar = 6
-type(bar)
-# <class 'int'>
-```
-
-This means that all things in python have a set of both *attributes* and *behaviours* assoicated with them
-
----
-
-We can inspects the attributes and methods associated with any python object in a couple of ways
-
-```python
-dir()
-help()
-```
-
-https://docs.python.org/3/library/functions.html
 
 ---
 
 ```python
-foo = "this is my string"
-dir(foo)
-# ['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'capitalize', 'casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isascii', 'isdecimal', 'isdigit', 'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'removeprefix', 'removesuffix', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
+def greeting(name):
+    return 'Hello ' + name
+
+greeting(1)
+# Traceback (most recent call last):
+#   File "<stdin>", line 1, in <module>
+#   File "<stdin>", line 2, in greeting
+# TypeError: can only concatenate str (not "int") to str
 ```
 
 ---
 
-"Dunder methods" or "Magic methods"
-
-```
-__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__'
-```
-
-We will come back to these and even write our own
+"Strong ***testing*** not strong ***typing***"
 
 ---
 
+### Spoiler: Type Hinting
+
+```python
+def greeting(name: str) -> str:
+    return 'Hello ' + name
+```
+
+https://docs.python.org/3/library/typing.html
+
+---
+
+<!-- In Python everything is an object, even functions
+<br>
+<br> -->
+
+We find out the type of a variable with ``type()``
+<br>
+<br>
+
+```python
+foo = "this is a string"
+type(foo)      # <class 'str'>
+
+bar = 10
+type(bar)      # <class 'int'>
+```
+<!-- <br>
+All things in python have a set of both *attributes* and *behaviours* assoicated with them -->
+
+---
+
+We can get help information for an object with ``help()``
+<br>
 ```python
 help(str)
 ```
 
-```
+```plaintext
 Help on class str in module builtins:
 
 class str(object)
@@ -123,37 +147,61 @@ class str(object)
 
 ---
 
-Builtin functions
+We can list all *properties* and *methods* of an object using ``dir()``
 
-<img src="../assets/builtin_functions.PNG" height="500px">
+```python
+foo = "this is my string"
+dir(foo)
+# ['__add__', '__class__', '__contains__', '__dir__','[...]', '__str__', 'capitalize', 'count', 'endswith', 'expandtabs', 'find', 'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isascii', 'isdecimal', 'isdigit', 'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'replace', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper',]
+```
+
+<!-- 
+"Dunder methods" or "Magic methods"
+<br><br>
+```
+__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__'
+```
+<br>
+We will come back to these and even write our own -->
 
 ---
+
+Builtin functions
+
+<img src="../assets/builtin_functions.PNG" height="400px">
+
+https://docs.python.org/3/library/functions.html
+
+
+---
+
 
 Builtin functions
 
 Already seen:
 
 ```python
-exit(), print(), type(), dir(), help(), str(), int(), 
+dir(), help(), type(), print()
 ```
 
 We'll visit more of these as we go
 
 ```python
-len(), range(), enumerate(), dict(), list(), # + More
+len(), range(), enumerate(), zip(), # + More
 ```
 
 https://docs.python.org/3/library/functions.html
+
 
 ---
 
 Built In Collection Types
 
-```python
-list
-tuple
-dict
-set
-```
+|||
+|---|---|
+|``tuple``|``(1, 2, 3)``|
+|``list``|``[1, 2, 3]``|
+|``set``|``{1, 2, 3}``|
+|``dict``|``{"a": 1, "b":2, "c": 3}``|
 
-We'll also visit these in greater detail shortly
+We'll also visit these in greater detail later

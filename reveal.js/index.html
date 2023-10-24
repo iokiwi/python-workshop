@@ -13,11 +13,16 @@
 
 	<style>
 		.reveal pre code {
-			white-space: pre-wrap !important;       /* css-3 */
-			white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
-			white-space: -pre-wrap !important;      /* Opera 4-6 */
-			white-space: -o-pre-wrap !important;    /* Opera 7 */
-			word-wrap: break-word !important;       /* Internet Explorer 5.5+ */
+			white-space: pre-wrap !important;
+			/* css-3 */
+			white-space: -moz-pre-wrap !important;
+			/* Mozilla, since 1999 */
+			white-space: -pre-wrap !important;
+			/* Opera 4-6 */
+			white-space: -o-pre-wrap !important;
+			/* Opera 7 */
+			word-wrap: break-word !important;
+			/* Internet Explorer 5.5+ */
 		}
 	</style>
 
@@ -29,214 +34,26 @@
 	<div class="reveal">
 		<div class="slides">
 
-			<section>
-				<h2>Python Essentials for Technology Professionals</h2>
-				<p>Presented Online for Trade Me By Simon Merrick</p>
-				<p>2023-10-25</p>
+
+			<section data-markdown="sections/0_introduction.md" data-separator="^---$" data-separator-vertical="^--$">
 			</section>
-
-			<section>
-				<h2>Who is this course for?</h2>
-				<p>People with experience with one or more other languages looking to transition/upskill in Python</p>
+			<section data-markdown="sections/1_hello_world.md" data-separator="^---$" data-separator-vertical="^--$">
 			</section>
-
-			<section>
-				<h2>What will we cover</h2>
-				<ul>
-					<li>Python specific language features</li>
-					<li>Python best practices</li>
-					<li>Python ecosystem (package and Environment Management)</li>
-					<li>Quirks and Gotchas</li>
-					<li>How to get the most out of Python</li>
-				</ul>
+			<section data-markdown="sections/2_virtual_environments.md" data-separator="^---$"
+				data-separator-vertical="^--$">
 			</section>
-
-			<section>
-				<h2>Goal</h2>
-				<p>Unknown Unknowns -> Known Knowns</p>
-				<p>Unknown Unknowns -> Known Unknowns</p>
-			</section>
-
-			<section>
-				<h2>What this course is not</h2>
-				<ul>
-					<li>Programming fundamentals</li>
-					<li>A deep dive into how to do every little thing in Python</li>
-				</ul>
-			</section>
-
-			<section>
-				<h2>Assumptions</h2>
-				<ul>
-					<li>Basic understanding of programming fundamentals</li>
-					<li>Ability to google / find documentation for basics</li>
-				</ul>
-			</section>
-
-			<section>
-				<h2>Who am I</h2>
-
-				Simon Merrick<br>
-				Cloud Engineer -- Payments
-			</section>
-
-			<section>
-				<h2>Who am I</h2>
-				<ul>
-					<li>10 years of academic and professional Python experience</li>
-					<li>Python NZ former Secretary and nominated committee member</li>
-					<li>Volunteer/Organising team for KiwiPycon 2019, 2022, 2023, 2024</li>
-				</ul>
-			</section>
-
-			<section>
-				<h1>Python</h1>
-				<img src="assets/python-logo.png" height="250px"><br>
-			</section>
-
-			<section>
-				<h1>1991</h1>
-				Python first released to public as version 0.9.0
-			</section>
-
-			<section>
-				<img src="assets/guido.jpg" height="500px"><br>
-				Guido Van Rossum
-				<br>a.k.a our BDFL<br>
-				(Benevolant Dictator for Life)
-			</section>
-
-			<section>
-				<h1>🐍⛔</h1>
-			</section>
-
-			<section>
-				<img src="assets/monty_python.jpg" height="600px"><br>
-			</section>
-
-			<section>
-				<img src="assets/spam_eggs.PNG" height="600px"><br>
-			</section>
-
-			<section>
-				<img src="assets/unladen_swallow.png"><br>
-			</section>
-
-			<section>
-				<h2>Python 2</h2><br>
-				2000 - 2015 🪦
-			</section>
-
-			<section>
-				<h2>Python 3</h2><br>
-				2008 - Present
-			</section>
-
-			<section>
-				<h2>Semver</h2><br>
-				<p>MAJOR.Minor.patch<p>
-			</section>
-
-			<section>
-				<img src="assets/jpmorgan.PNG" height="600px"><br>
-			</section>
-
-			<section>
-				<h2>Python 2</h2><br><br>
-				2000 - <s>2015</s> 🪦<br>
-				2000 - 2020 🪦🪦
-			</section>
-
-			<section>
-				<img src="assets/python_release_cycle.png" height="500px"><br>
-				<p><a>https://devguide.python.org/versions/</a></p>
-			</section>
-
-			<section>
-				<h2>Python 4</h2><br>
-				...probably not
-			</section>
-
-			<section>
-				<img src="assets/companies.jpg"><br>
-			</section>
-
-			<section>
-				Data Science<br>
-				Scientific Computing<br>
-				Machine Learning/Artificial Intelligence<br>
-				Web Development<br>
-				+ More
-			</section>
-
-			<section>
-				TIOBE Index "Programming Language of the Year"<br><br>
-
-				2023, 2021, 2020, 2018, 2010, 2007
-			</section>
-
-			 <section>
-				<h2>Why Python?</h2><br>
-				Easy, Powerful, Flexible, Extensible
-			</section>
-
-			<section>
-				<p>Relevant XKCD (<a href="https://xkcd.com/353/">#353</a>)</p>
-				<img src="assets/xkcd_353.png"><br>
-			</section>
-
-			<section>
-				Widely adopted by professionals who's primary job is <i><b>**not**</b></i> full time programming
-			</section>
-
-			<!-- <section>
-				<pr>Easter Egg</pr>
-				<pre><code>
-					>>> import antigravity
-				</code></pre>
+			<!-- <section data-markdown="sections/3_codestyle.md" data-separator="^---$" data-separator-vertical="^--$">
 			</section> -->
-
-			<section>
-				Specifically designed to be easily <s>written</s> <i><b>read</b></i>
+			<section data-markdown="sections/2_basics.md" data-separator="^---$" data-separator-vertical="^--$">
 			</section>
-
-			<section>
-				<p>Easter Egg</p>
-				<pre><code>
->>> import this
-The Zen of Python, by Tim Peters
-
-Beautiful is better than ugly.
-Explicit is better than implicit.
-Simple is better than complex.
-Complex is better than complicated.
-Flat is better than nested.
-Sparse is better than dense.
-Readability counts.
-[...]
-				</code></pre>
-				<p>PEP 20: The Zen of Python</p>
-				</p><a
-					href="https://peps.python.org/pep-0020/#the-zen-of-python">https://peps.python.org/pep-0020/#the-zen-of-python</a>
-				</p>
+			<section data-markdown="sections/conditions.md" data-separator="^---$" data-separator-vertical="^--$">
 			</section>
+			<section data-markdown="sections/loops.md" data-separator="^---$" data-separator-vertical="^--$">
 			</section>
-
-
-			<section>
-				"Batteries Included"<br><br>
-
-				200+ modules in the standard library<br><br>
-
-				<a>https://docs.python.org/3/library/index.html</a>
+			<section data-markdown="sections/functions.md" data-separator="^---$" data-separator-vertical="^--$">
 			</section>
-
-			<section data-markdown="sections/1_hello_world.md" data-separator="^---$" data-separator-vertical="^--$"></section>
-			<section data-markdown="sections/2_basics.md" data-separator="^---$" data-separator-vertical="^--$"></section>
-			<section data-markdown="sections/flow_control.md" data-separator="^---$" data-separator-vertical="^--$"></section>
-			<section data-markdown="sections/codestyle.md" data-separator="^---$" data-separator-vertical="^--$"></section>
-			<section data-markdown="sections/functions.md" data-separator="^---$" data-separator-vertical="^--$"></section>
-			<section data-markdown="sections/code_organisation.md" data-separator="^---$" data-separator-vertical="^--$"></section>
+			<section data-markdown="sections/code_organisation.md" data-separator="^---$"
+				data-separator-vertical="^--$"></section>
 			<section data-markdown="sections/typing.md" data-separator="^---$" data-separator-vertical="^--$"></section>
 
 			<!-- <section>
@@ -272,7 +89,7 @@ Readability counts.
 			<!-- Use external markdown resource, separate slides by three newlines; vertical slides by two newlines
 			<section data-markdown="sections/installation.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section> -->
 
-<!-- ###################################################################################
+			<!-- ###################################################################################
 #
 #
 #                                 Advanced Topics
